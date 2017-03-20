@@ -16,7 +16,10 @@ var fs=require("fs");
  * 合并lib文件
  */
 gulp.task('concat-lib',function(){
-    gulp.src(['vue/dist/vue.min.js','vue-router/dist/vue-router.min.js'],{
+    // gulp.src(['vue/dist/vue.min.js','vue-router/dist/vue-router.min.js'],{
+    //     cwd:'../lib'
+    // }).pipe(concat('vue.min.js')).pipe(gulp.dest('../release'));
+    gulp.src(['vue.min.js','vue-router.min.js'],{
         cwd:'../lib'
     }).pipe(concat('vue.min.js')).pipe(gulp.dest('../release'));
 })
